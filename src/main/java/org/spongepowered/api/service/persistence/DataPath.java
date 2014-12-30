@@ -22,6 +22,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package org.spongepowered.api.service.persistence;
 
-@org.spongepowered.api.util.annotation.NonnullByDefault
-package org.spongepowered.api.service.persistence.serialization;
+import org.spongepowered.api.service.persistence.data.DataView;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * A DataPath is used to annotate a target for automated serialization of
+ * a {@link DataSerializable} that can be referenced in a {@link DataView}
+ * map with given {@link #key()}.
+ */
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.FIELD, ElementType.METHOD })
+public @interface DataPath {
+
+    /**
+     * Gets the key for the annotated target that can be used to reference
+     * in a {@link org.spongepowered.api.service.persistence.data.DataView}.
+     *
+     * @return The key to reference the annotated target
+     */
+    String key();
+
+    /**
+     * Whether to collapse the given {@link DataSerializable} into the current
+     * {@link org.spongepowered.api.service.persistence.data.DataView} as a
+     * top level value instead of possibly creating a new
+     * multi-value object.
+     *
+     * @return True if the given data is to be collapsed into the current data view
+     */
+    boolean collapse();
+
+}

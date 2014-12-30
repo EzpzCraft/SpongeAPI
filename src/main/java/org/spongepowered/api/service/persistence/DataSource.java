@@ -26,7 +26,6 @@ package org.spongepowered.api.service.persistence;
 
 import com.google.common.base.Optional;
 import org.spongepowered.api.service.persistence.data.DataContainer;
-import org.spongepowered.api.service.persistence.serialization.DataSerializable;
 
 public interface DataSource {
 

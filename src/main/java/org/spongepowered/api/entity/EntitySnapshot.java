@@ -25,7 +25,7 @@
 
 package org.spongepowered.api.entity;
 
-import org.spongepowered.api.service.persistence.serialization.DataSerializable;
+import org.spongepowered.api.service.persistence.DataSerializable;
 
 /**
  * A mutable complete representation of an entity type and its associated data.

@@ -26,8 +26,8 @@
 package org.spongepowered.api.potion;
 
 import org.spongepowered.api.entity.living.Living;
-import org.spongepowered.api.service.persistence.serialization.DataSerializable;
-import org.spongepowered.api.service.persistence.serialization.SerializableAs;
+import org.spongepowered.api.service.persistence.DataSerializable;
+import org.spongepowered.api.service.persistence.SerializableAs;
 
 /**
  * Represents a possible Potion Effect.
